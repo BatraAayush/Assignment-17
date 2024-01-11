@@ -6,8 +6,8 @@ export const foodRouter = express.Router();
 const addFood = async(food) => {
   try{
     const newFood = new Food(food);
-    if(!newFood.foodName || !newFood.calories || !newFood.proteinGrams || !newFood.carbohydrates ||!newFood.fatGrams){
-      console.error('missing fields');
+    if(!newFood.foodName){
+      console.error('missing fieldsss');
     } else {
       const savedFood = await newFood.save();
       return savedFood;
