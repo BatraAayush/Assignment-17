@@ -7,7 +7,7 @@ const addFood = async(food) => {
   try{
     const newFood = new Food(food);
     if(!newFood.foodName){
-      console.error('missing fieldsss');
+      console.error('missing fields');
     } else {
       const savedFood = await newFood.save();
       return savedFood;
