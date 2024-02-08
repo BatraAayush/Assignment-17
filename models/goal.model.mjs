@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const goalSchema = new mongoose.Schema({
   goalName: String,
   description: String,
-  targetDate: String,
+  targetDate: Date,
   targetCaloriesValue: Number,
   status: {
     type: String,
